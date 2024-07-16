@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Sun and Moon</title>
+        <style>
+            .parent
+            {
+                width: 100%;
+                height: 100svh;
+                border: 1px solid black;
+            }
+            .child1{
+                width:100%;
+                height: 50svh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                animation-name: box1;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            .child2
+            {
+                width: 100%;
+                height: 50svh;
+                background-color: skyblue;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                animation-name: box2;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            .bar{
+                width: 150px;
+                height:100svh;
+                position: absolute;
+                left: 550px;
+                animation-name: baranimation;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            .moon
+            {
+                width: 150px;
+                height: 150px;
+                background-color: white;
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px 5px white;
+            }
+            .sun
+            {
+                width: 150px;
+                height: 150px;
+                background: linear-gradient(orange, yellow);
+                border-radius: 50%;
+                position: absolute;
+                bottom: 0;
+                box-shadow: 0px 0px 10px 5px orange;
+            }
+            @keyframes baranimation {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(180deg);
+                }
+            }
+            @keyframes box1 {
+                from{
+                    background-color: black;
+                }
+                to{
+                    background-color: skyblue;
+                }
+            }
+            @keyframes box2 {
+                from{
+                    background-color: skyblue;
+                }
+                to{
+                    background-color: black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="bar">
+                <div class="moon"></div>
+                <div class="sun"></div>
+            </div>
+            <div class="child1">
+            </div>
+            <div class="child2">
+            </div>
+        </div>
+    </body>
+</html>

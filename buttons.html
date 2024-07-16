@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Buttons</title>
+        <style>
+            .parent
+            {
+                width: 200px;
+                height: 100px;
+                background-color: #F2F2F2;
+                border-radius: 15px;
+                border:2px solid #909090;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                z-index:1;
+                transition: all 2s;
+            }
+            .parent:hover{
+                color : red;
+            }
+            .parent::before{
+                position: absolute;
+                content: "";
+                width: 200px;
+                height: 100px;
+                background: linear-gradient(yellow, white);
+                bottom:-200;
+                border-radius: 15px;
+                transition: all 1s;
+                z-index:-1;
+            }
+            .parent:hover::before
+            {
+                bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">Click Me</div>
+    </body>
+</html>

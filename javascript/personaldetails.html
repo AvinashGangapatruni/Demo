@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <script>
+            function fun(event) {
+            console.log(event.target.value);
+        }
+        </script>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+            }
+           .container {
+            border: 1px solid black;
+            width: 800px;
+            height: 850px;
+            padding-left: 50px;
+            padding-top: 50px;
+           }
+           label{
+            color: brown;
+            font-size: 20px;
+            font-family: Copperplate Gothic Light;
+           }
+           input{
+            border-color: rgb(196, 218, 132);
+           }
+           input::placeholder
+           {
+            color: black;
+           }
+           p{
+            color:brown;
+            font-size: 20px;
+            font-family: Copperplate Gothic Light;
+           }
+           textarea::placeholder{
+            color: black;
+           }
+           th{
+            color: brown;
+            font-family: Copperplate Gothic Light;
+           }
+           .gender
+           {
+            color : black;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form value="" onchange="fun(event)">
+        <label><b>First Name:</b></label>
+        <input type="text" placeholder="Enter your first name"/>
+        <br/>
+        <br/>
+        <label><b>Second Name:</b></label>
+        <input type="text" placeholder="Enter your second name"/>
+        <br/>
+        <br/>
+        <label><b>DOB:</b></label>
+        <input type="date" placeholder="Enter your date of birth"/>
+        <br/>
+        <br/>
+        <label><b>Age:</b></label>
+        <input type="number" placeholder="Enter your age"/>
+        <br/>
+        <br/>
+        <label><b>Father Name:</b></label>
+        <input type="text" placeholder="Enter your father name"/>
+        <br/>
+        <br/>
+        <label><b>Mother Name:</b></label>
+        <input type="text" placeholder="Enter your mother name"/>
+        <br/>
+        <br/>
+        <label><b>Address:</b></label>
+        <textarea placeholder="Enter your address"></textarea>
+        <br/>
+        <br/>
+        <label><b>Gender:</b></label>
+        <input type="radio" name="gender" value="male"/>
+        <label class="gender">Male</label>
+        <input type="radio" name="gender" value="female"/>
+        <label class="gender">Female</label>
+        <input type="radio" name="gender" value="other"/>
+        <label class="gender">Other</label>
+        <br/>
+        <br/>
+        <label><b>Certifications:</b></label>
+        <input type="text" placeholder="Enter your certification details"/>
+        <br/>
+        <br/>
+        <p><b>Academic details:</b></p>
+        <table border="1px">
+            <tr>
+                <th>N.I</th>
+                <th>YOP</th>
+                <th>Percentage</th>
+                <th>Place</th>
+            </tr>
+            <tr>
+                <th>SSC</th>
+                <td><input type="number" placeholder="Enter your Year of Passing"/></td>
+                <td><input type="number" placeholder="Enter your Percentage"/></td>
+                <td><input type="text" placeholder="Enter your Institution"/></td>
+            </tr>
+            <tr>
+                <th>Diploma</th>
+                <td><input type="number" placeholder="Enter your Year of Passing"/></td>
+                <td><input type="number" placeholder="Enter your Percentage"/></td>
+                <td><input type="text" placeholder="Enter your Institution"/></td>
+            </tr>
+            <tr>
+                <th>B.Tech</th>
+                <td><input type="number" placeholder="Enter your Year of Passing"/></td>
+                <td><input type="number" placeholder="Enter your Percentage"/></td>
+                <td><input type="text" placeholder="Enter your Institution"/></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <label><b>Skills:</b></label>
+        <input type="text" placeholder="Enter your skills"/>
+        <br/>
+        <br/>
+        <label><b>Hobbies:</b></label>
+        <input type="text" placeholder="Enter your hobbies"/>
+        <br/>
+        <br/>
+        <label><b>Profile Pic:</b></label>
+        <input type="file" accept="image/*"/>
+        <br/>
+        <br/>
+        <label><b>Badges:</b></label>
+        <input type="text" placeholder="Enter your badges"/>
+        <br/>
+        <br/>
+        <label><b>Description:</b></label>
+        <textarea placeholder="Enter your description"></textarea>
+        <br/>
+        <br/>
+        <input type="reset" value="Submit"/>
+        </form>
+    </div>
+    </body>
+</html>

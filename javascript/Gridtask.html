@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid Task</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: whitesmoke;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 3px solid black;
+      padding: 10px;
+      text-align: center;
+      height: 100px;
+      width: 100px;
+    }
+
+    .highlighted {
+      background-image: url(../image/poki.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    #button-container {
+      display: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: rgb(206, 118, 179);
+    }
+
+    #table-container {
+      margin-top: 20px;
+    }
+
+    .tb {
+      font-size: 18px;
+      background-color: skyblue;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .tb:hover {
+      background-color: yellow;
+      border: 2px solid lightgray;
+    }
+
+    .up {
+      font-size: 18px;
+    }
+
+    .up:hover {
+      background-color: rgb(235, 17, 216);
+      ;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="get_Table()" class="tb">Show Table</button>
+  <div id="table-container"></div>
+  <div id="button-container">
+    <button onclick="moveUp()" class="up"><i class="fa-solid fa-arrow-up">&nbsp;UP</i></button>
+    <button onclick="moveLeft()" class="up"><i class="fa-solid fa-arrow-left">&nbsp;LEFT</i></button>
+    <button onclick="moveRight()" class="up"><i class="fa-solid fa-arrow-right">&nbsp;RIGHT</i></button>
+    <button onclick="moveDown()" class="up"><i class="fa-solid fa-arrow-down">&nbsp;DOWN</i></button>
+  </div>
+
+  <script>
+    let highlightedCell = null;
+    function get_Table() {
+      let n = prompt("Enter an integer value:");
+      if (n === null || isNaN(n) || n <= 0) {
+        alert("Invalid input. Please enter a positive integer.");
+        return;
+      }
+
+      let tableContainer = document.getElementById("table-container");
+      tableContainer.innerHTML = "";
+      let table = document.createElement("table");
+
+      for (let i = 0; i < n; i++) {
+        let row = table.insertRow();
+        for (let j = 0; j < n; j++) {
+          let cell = row.insertCell();
+          if (i === 0 && j === 0) {
+            cell.classList.add("highlighted");
+            highlightedCell = cell;
+          }
+        }
+      }
+
+      tableContainer.appendChild(table);
+      document.getElementById("button-container").style.display = "block";
+    }
+
+    function moveUp() {
+      if (highlightedCell) {
+        let rowIndex = highlightedCell.parentNode.rowIndex;
+        let columnIndex = highlightedCell.cellIndex;
+        if (rowIndex > 0) {
+          highlightedCell.classList.remove("highlighted");
+          let newRow = highlightedCell.parentNode.parentNode.rows[rowIndex - 1];
+          let newCell = newRow.cells[columnIndex];
+          newCell.classList.add("highlighted");
+          highlightedCell = newCell;
+        }
+      }
+    }
+
+    function moveDown() {
+      if (highlightedCell) {
+        let rowIndex = highlightedCell.parentNode.rowIndex;
+        let columnIndex = highlightedCell.cellIndex;
+        let table = highlightedCell.parentNode.parentNode;
+        if (rowIndex < table.rows.length - 1) {
+          highlightedCell.classList.remove("highlighted");
+          let newRow = table.rows[rowIndex + 1];
+          let newCell = newRow.cells[columnIndex];
+          newCell.classList.add("highlighted");
+          highlightedCell = newCell;
+        }
+      }
+    }
+
+    function moveLeft() {
+      if (highlightedCell) {
+        let columnIndex = highlightedCell.cellIndex;
+        if (columnIndex > 0) {
+          highlightedCell.classList.remove("highlighted");
+          let newRow = highlightedCell.parentNode;
+          let newCell = newRow.cells[columnIndex - 1];
+          newCell.classList.add("highlighted");
+          highlightedCell = newCell;
+        }
+      }
+    }
+
+    function moveRight() {
+      if (highlightedCell) {
+        let columnIndex = highlightedCell.cellIndex;
+        let row = highlightedCell.parentNode;
+        if (columnIndex < row.cells.length - 1) {
+          highlightedCell.classList.remove("highlighted");
+          let newCell = row.cells[columnIndex + 1];
+          newCell.classList.add("highlighted");
+          highlightedCell = newCell;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

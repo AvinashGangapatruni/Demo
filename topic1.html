@@ -1,0 +1,368 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            .parent {
+                width: 100%;
+                height: 100svh;
+            }
+            .child1 {
+                width: 100%;
+                height: 55%;
+                background: linear-gradient(to top right, #205F81, #80CDC5);
+            }
+            .header {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-left: 25px;
+            }
+            #topic {
+                margin-left: -5px;
+                margin-top: -5px;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                font-size: 13px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-right: 25px;
+                color: white;
+                gap: 85px;
+            }
+            #home {
+                color: #2a545e;
+            }
+            .profile {
+                font-size: 19px;
+                color: black;
+                margin-right: 20px;
+                background-color: white;
+                padding: 5px;
+                border-radius: 100%;
+            }
+
+            .hero {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                color: white;
+                font-size: 40px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: 100;
+            }
+
+            .hero p {
+                color: #013d51;
+                font-size: 20px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+
+            .search-box {
+                width: 60%;
+                height: 16%;
+                border-radius: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                margin-top: -10px;
+                margin: -20px auto 0px auto;
+            }
+            .search-icon {
+                font-size: 18px;
+                font-weight: 500;
+                color: rgb(143, 135, 135);
+                position: relative;
+                left: 30px;
+            }
+            .message {
+                font-size: 20px;
+                font-weight: 500;
+                color: rgb(133, 130, 130);
+                position: relative;
+                left: -150px;
+            }
+            .search {
+                font-size: 22px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: 80%;
+                color: white;
+                background-color: #43ad9f;
+                border-radius: 50px;
+                position: relative;
+                right: 7px;
+            }
+
+            .child2 {
+                width: 100%;
+                height: 45%;
+                background-color: #7FCBC3;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px; 
+            }
+
+            .box-1 {
+                width: 25%;
+                height: 45%;
+                background-color: white;
+                position: absolute;
+                border-radius: 20px;
+                bottom: 40px;
+                left: 240px;
+                background-image: url(./image/data.png);
+                background-size: 100% 65%;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+
+            .box-1 h1 {
+                font-size: 25px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position: relative;
+                top: 13px;
+                left: 20px;
+            }
+
+            .box-1 p {
+                font-size: 18px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                position: absolute;
+                left: 20px;
+                right: 10px;
+                top: 50px;
+                color: rgb(130, 128, 128);
+            }
+
+            .box-1 h2 {
+                font-size: 13px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 8%;
+                height: 5%;
+                color: white;
+                background-color: #00AEF8;
+                position: absolute;
+                top: 15px;
+                right: 12px;
+                border-radius: 3px;
+            }
+            .box-2 {
+                width: 40%;
+                height: 45%;
+                position: absolute;
+                border-radius: 20px;
+                bottom: 40px;
+                right: 240px;
+                background-image: url(./image/box2.jpg);
+                background-size: 100% 100;
+            }
+
+            .box-2 h1 {
+                font-size: 25px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position: relative;
+                top: 10px;
+                left: 20px;
+                color: white;
+            }
+            .box-2 p {
+                font-size: 20px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                position: absolute;
+                left: 20px;
+                right: 60px;
+                top: 50px;
+                color: white;
+            }
+
+            .box-2 h2 {
+                font-size: 13px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                padding: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 6%;
+                height: 5%;
+                color: white;
+                background-color: #566BFF;
+                position: absolute;
+                top: 15px;
+                right: 12px;
+                border-radius: 3px;
+            }
+
+            .learn {
+                font-size: 18px;
+                font-weight: 500;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: 10%;
+                color: white;
+                background-color: #43ad9f;
+                border-radius: 50px;
+                position: relative;
+                top: 115px;
+                left: 15px;
+            }
+
+            .share {
+                position: relative;
+                bottom: -165px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .share p {
+                color: white;
+                font-size: 20px;
+            }
+            .share i {
+                color: white;
+                font-size: 15px;
+                margin: 5px;
+                padding: 10px;
+                background-color: #43ad9f;
+                border-radius: 100%;
+                position: relative;
+                bottom: -40px;
+                left: -150px;
+            }
+
+            .c1 {
+                width: 15px;
+                height: 15px;
+                background-color: black;
+                border-radius: 3px;
+                z-index: 0.5;
+            }
+
+            .c2 {
+                width: 13px;
+                height: 13px;
+                background-color: #3D8196;
+                border: 2px solid black;
+                border-radius: 3px;
+                z-index: 1;
+                position: relative;
+                top: -4px;
+                left: -20px;
+            }
+
+            .save {
+                width: 30px;
+                height: 30px;
+                background-image: url(./image/save.png);
+                background-size: 100% 100%;
+                color: white;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            span {
+                position: relative;
+                left: 5px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="box-1">
+                <h1>Web Design</h1>
+                <p>When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+                <h2>14</h2>
+            </div>
+            <div class="box-2">
+                <h2>25</h2>
+                <h1>Finance</h1>
+                <p>Topic listening temaplate includeshomepage, listening page, deatil page, and contact page. You can fell free to edit and adapt your CMS reqirements.</p>
+                <div class="learn">Learn More</div>
+                <div class="share">
+                    <p>Share :</p>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-pinterest"></i>
+                </div>
+                <div class="save"></div>
+            </div>
+
+            <div class="child1">
+                <div class="header">
+                    <div class="logo">
+                         <div class="c1"></div>
+                         <div class="c2"></div>
+                        <p id="topic">Topic</p>
+                    </div>
+                    <div class="menu">
+                        <p id="home">HOME</p>
+                        <p>BROWSE TOPICS</p>
+                        <p>HOW IT WORKS</p>
+                        <p>FAQs</p>
+                        <P>CONTACT</P>
+                        <p id="pages">PAGES<span>&#11167;</span></p>
+                    </div>
+                    <div class="profile">
+                        <i class="bi bi-person"></i>
+                    </div>
+                </div>
+
+                <div class="hero">
+                    <h1>Discover.Learn. Enjoy</h1>
+                    <p>platform for creatives around the world</p>
+                </div>
+
+                <div class="search-box">
+                    <div class="search-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <div class="message">
+                        <p>Design, Code, Marketing, Finance...</p>
+                    </div>
+                    <div class="search">Search</div>
+                </div>
+            </div>
+
+            <div class="child2"></div>
+            
+        </div>
+    </body>
+</html>

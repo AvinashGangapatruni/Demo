@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Task</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Montserrat', sans-serif;
+            }
+        
+            .my_page {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap; /* Allows items to wrap to the next line */
+                padding: 20px;
+            }
+        
+            .part1 {
+                width: 100%;
+                max-width: 400px; /* Adjust as needed */
+                height: auto; /* Adjust based on content */
+                position: relative;
+                margin-bottom: 20px; /* Add spacing between part1 and part2 */
+            }
+        
+            .for_img {
+                position: absolute;
+                top: -80px; /* Adjust positioning */
+                left: 20px; /* Adjust positioning */
+            }
+        
+            .info1, .info2, .info3, .info4 {
+                color: black;
+                font-family: Montserrat;
+                padding: 0 20px; /* Add padding for better readability */
+            }
+        
+            .info1 {
+                font-size: 24px; /* Adjust font size */
+                top: 100px;
+            }
+        
+            .info2 {
+                font-size: 14px;
+                top: 150px;
+            }
+        
+            .info3 {
+                font-size: 16px;
+                font-weight: bold;
+                top: 270px;
+            }
+        
+            .info4 {
+                font-size: 14px;
+                top: 380px;
+            }
+        
+            .contains {
+                padding: 20px; /* Add padding */
+                text-align: center; /* Center align button */
+            }
+        
+            button {
+                width: 100px;
+                height: 30px;
+                background-color: white;
+                font-family: Montserrat;
+                border: 1.5px solid black;
+                border-color: #5334FF;
+                font-size: 14px;
+            }
+        
+            .part2 {
+                width: 100%;
+                max-width: 400px; /* Adjust as needed */
+                height: auto; /* Adjust based on content */
+                margin-left: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: move 5s linear infinite;
+            }
+        
+            .part2 img {
+                max-width: 100%; /* Ensure image doesn't overflow */
+                height: auto; /* Maintain aspect ratio */
+            }
+        
+            @keyframes move {
+                from {
+                    transform: translateY(-10px);
+                }
+                to {
+                    transform: translateY(20px);
+                }
+            }
+        
+            /* Media Queries for Responsive Design */
+            @media (max-width: 768px) {
+                .my_page {
+                    flex-direction: column; /* Stack items vertically on smaller screens */
+                    align-items: center;
+                }
+        
+                .part1, .part2 {
+                    margin-left: 0; /* Remove left margin on smaller screens */
+                }
+        
+                .part2 {
+                    margin-top: 20px; /* Add spacing between part1 and part2 on smaller screens */
+                }
+        
+                .info1 {
+                    font-size: 20px; /* Adjust font size for smaller screens */
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="my_page">
+            <div class="part1">
+                <div class="for_img">
+                    <img src="../image/bulb.png"/>
+                </div>
+                <div class="info1">
+                    IS VR BAD FOR YOUR BRAIN?
+                </div>
+                <div class="info2"><p>There is no scientific evidence that Virtual Reality can provoke constant brain damage to adults and kids.There are only some symptoms such as dizziness,depression, and collapse that appear while the VR experience. The technology is still new and requires investigation and research.</p></div>
+                <div class="info3"><p>Bibendum neque egestas congue quisque egestas diam in arcu. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Sit amet consectetur adipiscing elit.</p></div>
+                <div class="info4"><p>Image from <a href="">Freepik</a></p></div>
+                <div class="contains">
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="part2">
+                <img src="../image/task_picture.png"/>
+            </div>
+        </div>
+    </body>
+</html>

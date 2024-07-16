@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <title>Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent {
+            width: 500px;
+            height: 500px;
+            border: 10px dashed rgb(9, 194, 36);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .num1 {
+            font-size: 60px;
+            position: absolute;
+            top: 35;
+            left: 350;
+        }
+
+        .num2 {
+            font-size: 60px;
+            position: absolute;
+            top: 100;
+            left: 420;
+        }
+
+        .num3 {
+            font-size: 60px;
+            position: absolute;
+            top: 200;
+            left: 460;
+        }
+
+        .num4 {
+            font-size: 60px;
+            position: absolute;
+            top: 310;
+            left: 420;
+        }
+
+        .num5 {
+            font-size: 60px;
+            position: absolute;
+            top: 400;
+            left: 350;
+        }
+
+        .num6 {
+            font-size: 60px;
+            position: absolute;
+            top: 430;
+            left: 240;
+        }
+
+        .num7 {
+            font-size: 60px;
+            position: absolute;
+            top: 400;
+            left: 130;
+        }
+
+        .num8 {
+            font-size: 60px;
+            position: absolute;
+            top: 310;
+            left: 45;
+        }
+
+        .num9 {
+            font-size: 60px;
+            position: absolute;
+            top: 200;
+            left: 15;
+        }
+
+        .num10 {
+            font-size: 60px;
+            position: absolute;
+            top: 100;
+            left: 40;
+        }
+
+        .num11 {
+            font-size: 60px;
+            position: absolute;
+            top: 30;
+            left: 105;
+        }
+
+        .num12 {
+            font-size: 60px;
+            position: absolute;
+            top: 0;
+            left: 220;
+        }
+
+        .dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            top: 230;
+            left: 240;
+        }
+
+        .seconds {
+            width: 1px;
+            height: 350px;
+            position: absolute;
+            left: 250;
+            top: 70;
+            /* animation-name: seconds;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+            animation: seconds 60s steps(60) infinite;
+        }
+
+        .part1 {
+            width: 2px;
+            height: 27svh;
+            background-color: black;
+        }
+
+        .minutes {
+            width: 3px;
+            height: 350px;
+            position: absolute;
+            left: 248;
+            top: 100;
+            animation-name: seconds;
+            animation-duration: 3600s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .part2 {
+            width: 5px;
+            height: 20svh;
+            background-color: black;
+        }
+
+        .hours {
+            width: 2px;
+            height: 300px;
+            position: absolute;
+            left: 245;
+            top: 160;
+            animation-name: seconds;
+            animation-duration: 86400s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .part3{
+            width: 8px;
+            height: 12svh;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @keyframes seconds {
+            0% {
+                transform: rotate(0deg) translate(bottom);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="num1">1</div>
+        <div class="num2">2</div>
+        <div class="num3">3</div>
+        <div class="num4">4</div>
+        <div class="num5">5</div>
+        <div class="num6">6</div>
+        <div class="num7">7</div>
+        <div class="num8">8</div>
+        <div class="num9">9</div>
+        <div class="num10">10</div>
+        <div class="num11">11</div>
+        <div class="num12">12</div>
+        <div class="dot"></div>
+        <div class="seconds">
+            <div class="part1"></div>
+        </div>
+        <div class="minutes">
+            <div class="part2"></div>
+        </div>
+        <div class="hours">
+            <div class="part3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

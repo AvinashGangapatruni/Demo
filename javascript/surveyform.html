@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        function fun(event) {
+            console.log(event.target.value);
+        }
+    </script>
+</head>
+
+<body>
+    <form value="" onchange="fun(event)">
+        <label>Enter First Name:</label>
+        <input type="text" /><br /><br />
+        <label>Enter Last Name:</label>
+        <input type="text"/><br /><br />
+        <label>Enter Phone Number:</label>
+        <input type="text"/><br /><br />
+        <label>Enter Address:</label>
+        <textarea></textarea><br /><br />
+        <button type="reset">Submit</button>
+    </form>
+</body>
+
+</html>

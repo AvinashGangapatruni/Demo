@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <style>
+        .parent {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+
+        .child1 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgSbVYx1ATozUxMVsgjs6cttAUujQP2egV8w&s);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        .child2 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://qph.cf2.quoracdn.net/main-qimg-79e0b3ed5f3d4639129ac0f2a34b426e-lq);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        .child3 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://www.shutterstock.com/image-vector/doraemon-cute-hand-drawn-illustration-260nw-2352837563.jpg);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        .child4 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://i.pinimg.com/736x/52/c6/65/52c665df0515dd447eb92544374cf543.jpg);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        .child5 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://i.pinimg.com/736x/3d/96/eb/3d96eba59a324ac1570e174fd5bb5e94.jpg);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        .child6 {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 8px;
+            cursor: pointer;
+            background-image: url(https://i.pinimg.com/originals/49/4d/2e/494d2e25fad7412b4f11beb7242ba804.png);
+            background-size: 100% 100%;
+            border-radius: 10px;
+        }
+        
+        .parent button{
+            width: fit-content;
+            height: fit-content;
+        }
+        ul.slick-dots{
+            position: absolute;
+            display: flex;
+            gap: 10px;
+            left:50%;
+            bottom:-10;
+        }
+        ul button{
+            display: none;
+        }
+        .slick-active
+        {
+            color:red;
+        }
+        .prev_arrow
+        {
+            border-radius: 50%;
+            border-color: aqua;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.parent').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots:true,
+            centerMode: true,
+            prevArrow:'<button class="prev_arrow"><</button>',
+            nextArrow:'<button class="prev_arrow">></button>',
+        });
+    </script>
+</body>
+
+</html>

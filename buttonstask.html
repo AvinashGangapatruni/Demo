@@ -1,0 +1,88 @@
+<html>
+    <head>
+       <style>
+        body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #main{
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+button{
+    height: 150px;
+    width: 350px;
+    border: none;
+    position: absolute;
+    border-radius: 80px;
+    background-image: url(https://www.cleankisslifestyle.com/cdn/shop/articles/316942-blue-sky-with-clouds.jpg?v=1605136872);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+#moon{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    right: 10;
+    top: 25;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 3s;
+    z-index: 10;
+}
+button:hover #moon{
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px lightgrey;
+    opacity: 1;
+}
+button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    border: none;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/000/556/930/small_2x/RR-v-jan-2019-135.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -180px;
+    left: -100 ;
+    transition: all 1s;
+}
+button:hover::before{
+    transform: translate(100px,180px);
+}
+button::after{
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: radial-gradient(yellow, orange);
+    box-shadow: 0px 0px 10px 5px orange;
+    position: absolute;
+    top:25px ;
+    left: 10;
+    opacity: 1;
+    transition: opacity 1s;
+}
+button:hover::after{
+    transform: translateX(230px);
+    transition: all 2s;
+    opacity: 0;
+}
+    </style>
+    </head>
+    <body>
+        <!-- <div id="main"> -->
+            <button>
+               <div id="moon"></div> 
+            </button>
+        <!-- </div> -->
+    </body>
+</html>

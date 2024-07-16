@@ -1,0 +1,474 @@
+<html>
+    <head>
+        <title>Car task</title>
+        <style>
+            .parent
+            {
+                width: 100%;
+                height: 90svh;
+            }
+            .child1
+            {
+                background-color: white;
+                width: 100%;
+                height:60%;
+                animation-name: night;
+                animation-duration: 10s;
+            }
+            .child2
+            {
+                background-color: black;
+                position: relative;
+                bottom: 0px;
+                width: 100%;
+                height: 30%;
+            }
+            .line1
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 40px;
+                bottom:25px;
+            }
+            .line2
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 140px;
+                bottom:25px;
+            }
+            .line3
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 240px;
+                bottom:25px;
+            }
+            .line4
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 340px;
+                bottom:25px;
+            }
+            .line5
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 440px;
+                bottom:25px;
+            }
+            .line6
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 540px;
+                bottom:25px;
+            }
+            .line7
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 640px;
+                bottom:25px;
+            }
+            .line8
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 740px;
+                bottom:25px;
+            }
+            .line9
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 840px;
+                bottom:25px;
+            }
+            .line10
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 940px;
+                bottom:25px;
+            }
+            .line11
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 1040px;
+                bottom:25px;
+            }
+            .line12
+            {
+                background-color: white;
+                width: 70px;
+                height: 10px;
+                display: flex;
+                position: absolute;
+                left: 1140px;
+                bottom:25px;
+            }
+            .cloud1
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -35px;
+                left:-20px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud2
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -45px;
+                left:70px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+}
+            .cloud3
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -35px;
+                left:160px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud4
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -55px;
+                left:250px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud5
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -25px;
+                left:340px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud6
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -65px;
+                left:430px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud7
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -23px;
+                left:520px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud8
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -35px;
+                left:610px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud9
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -75px;
+                left:700px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud10
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -45px;
+                left:790px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud11
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -23px;
+                left:880px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud12
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -43px;
+                left:970px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud13
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -63px;
+                left:1060px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            .cloud14
+            {
+                background-color: #4F95DA;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -68px;
+                left:1150px;
+                animation-name: dark;
+                animation-duration: 10s;
+
+            }
+            @keyframes night {
+                from{
+                    background-color: white;
+                }
+                to{ background-color: gray;}
+            }
+            @keyframes dark
+            {
+                from{background-color: #4F95DA;}
+                to{background-color: gray;}
+            }
+            .sun
+            {
+                background-color: #FFC000;
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                left: 750px;
+                top: 30px;
+                box-shadow: 2px 2px 20px  #FFC000;
+                animation-name: moon;
+                animation-duration: 10s;
+            }
+            @keyframes moon
+            {
+                from{background-color:#FFC000;}
+                to{background-color: white;}
+                from{box-shadow: 2px 2px 20px 10px #FFC000;}
+                to{box-shadow:2px 2px 20px 10px gray;}
+            }
+            .tire1
+            {
+                background-color: #3A3A3A;
+                position: absolute;
+                width: 70px;
+                height:70px;
+                border-radius: 100%;
+                border: 0.5px solid white;
+                position: absolute;
+                top: 60px;
+                left:130px
+            }
+            .tire2
+            {
+                background-color: #3A3A3A;
+                position: absolute;
+                width: 70px;
+                height:70px;
+                border-radius: 100%;
+                border: 0.5px solid white;
+                position: absolute;
+                top: 60px;
+                left:260px
+            }
+            .seat
+            {
+                width: 250px;
+                height: 80px;
+                background-color: #FE0000;
+                position: absolute;
+                left: 110px;
+                top: 0px;
+                border: 2px solid black;
+            }
+            .light1
+            {
+                width: 25px;
+                height: 25px;
+                background-color: #175E84;
+                border: 1px solid black;
+                position: absolute;
+                top:0px;
+                right: 0px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .light2
+            {
+                width: 25px;
+                height: 25px;
+                background-color: #175E84;
+                border: 1px solid black;
+                position: absolute;
+                top:25px;
+                right: 0px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .top
+            {
+                width: 130px;
+                height: 60px;
+                background-color: #C00000;
+                position: relative;
+                left: 160px;
+                top:2px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child1">
+                <div class="cloud1"></div>
+                <div class="cloud2"></div>
+                <div class="cloud3"></div>
+                <div class="cloud4"></div>
+                <div class="cloud5"></div>
+                <div class="cloud6"></div>
+                <div class="cloud7"></div>
+                <div class="cloud8"></div>
+                <div class="cloud9"></div>
+                <div class="cloud10"></div>
+                <div class="cloud11"></div>
+                <div class="cloud12"></div>
+                <div class="cloud13"></div>
+                <div class="cloud14"></div>
+                <div class="sun"></div>
+            </div>
+            <div class="top"></div>
+            <div class="child2">
+                <div class="car">
+                    <div class="seat">
+                        <div class="light1"></div>
+                        <div class="light2"></div>
+                    </div>
+                    <div class="tire1"></div>
+                    <div class="tire2"></div>
+                </div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+                <div class="line4"></div>
+                <div class="line5"></div>
+                <div class="line6"></div>
+                <div class="line7"></div>
+                <div class="line8"></div>
+                <div class="line9"></div>
+                <div class="line10"></div>
+                <div class="line11"></div>
+                <div class="line12"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

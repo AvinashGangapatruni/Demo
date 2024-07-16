@@ -1,0 +1,226 @@
+avina@DESKTOP-UAVIOFC MINGW64 ~
+$ cd /
+
+avina@DESKTOP-UAVIOFC MINGW64 /
+$ cd c
+
+avina@DESKTOP-UAVIOFC MINGW64 /c
+$ cd git
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git
+$ git init
+Initialized empty Git repository in C:/git/.git/
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git config --global user.name "23A95A1209"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git config --global user.mail "23A95A1209@aec.edu.in"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig core.fsmonitor=true
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
+file:C:/Users/avina/.gitconfig  user.name=23A95A1209
+file:C:/Users/avina/.gitconfig  user.mail=23A95A1209@aec.edu.in
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.symlinks=false
+file:.git/config        core.ignorecase=true
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git init
+Reinitialized existing Git repository in C:/git/.git/
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ touch 1.py
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ touch 2.py
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ get init
+bash: get: command not found
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git init
+Reinitialized existing Git repository in C:/git/.git/
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git add 1.py
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git branch -M "main"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (main)
+$ git init
+Reinitialized existing Git repository in C:/git/.git/
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (main)
+$ ls
+1.py  2.py
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (main)
+$ git branch -M "master"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git add .
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.py
+        new file:   2.py
+
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git remote add origin https://github.com/AvinashGangapatruni/projectA.git
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git branch -M developer
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git commit -m "new"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'avina@DESKTOP-UAVIOFC.(none)')
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git config --global user.name "23A95A1209"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git config --global user.mail "23A95A1209@aec.edu.in"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git add .
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git status
+On branch developer
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.py
+        new file:   2.py
+
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git commit -m "new"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'avina@DESKTOP-UAVIOFC.(none)')
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git push origin "developers"
+error: src refspec developers does not match any
+error: failed to push some refs to 'https://github.com/AvinashGangapatruni/projectA.git'
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git branch -M master
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git commit -m "new"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'avina@DESKTOP-UAVIOFC.(none)')
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git config --global user.email "23A95A1209@aec.edu.in"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git commit -m "new"
+[master (root-commit) 70796b1] new
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.py
+ create mode 100644 2.py
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git config --global user.mail "23A95A1209@aec.edu.in"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git commit -m "new"
+On branch master
+nothing to commit, working tree clean
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (master)
+$ git branch -M "developer"
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git remote add origin https://github.com/AvinashGangapatruni/projectA.git
+error: remote origin already exists.
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$ git push origin developer
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 203 bytes | 203.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AvinashGangapatruni/projectA.git
+ * [new branch]      developer -> developer
+
+avina@DESKTOP-UAVIOFC MINGW64 /c/git (developer)
+$

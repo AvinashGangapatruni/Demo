@@ -1,0 +1,6 @@
+    .mydiv{
+     border: 2px solid black;
+     width: 80%;
+     max-width: 1000px;
+      min-width: 700px;
+    }

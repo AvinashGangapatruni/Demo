@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Membership Card</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #C7EEF5;
+            }
+            .parent{
+                width: 600px;
+                height: 300px;
+                border-radius: 15px;
+                background-image: url(https://t4.ftcdn.net/jpg/06/22/32/63/360_F_622326357_En6qwXYUWwq91US4EiyF3D0ybmSIlynz.jpg);
+                background-size: 100% 100%;
+                position: relative;
+            }
+            .parent:hover
+            {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 10px 10px lightgray;
+                transition: transform 0.5s ease-in-out;
+            }
+            .students{
+                position: relative;
+            }
+            .students img{
+                position: absolute;
+                width:80px;
+                left: 20;
+            }
+            .mb{
+                position: relative;
+            }
+            .mb p{
+                color: gold;
+                position: absolute;
+                left: 200;
+                font-size: 20px;
+                font-weight: 900;
+            }
+            .thub{
+                position: relative;
+            }
+            .thub p{
+                color: gold;
+                position: absolute;
+                top: 180;
+                left: 130;
+                font-size: 20px;
+                font-weight: 900;
+            }
+            .barcode img{
+                width: 90px;
+                height: 40px;
+                background-color: white;
+                position: absolute;
+                /* top: 210; */
+                bottom: 35;
+                right: -23;
+                transform: rotate(270deg);
+            }
+            .techincal{
+                position: relative;
+            }
+            .techincal img{
+                width: 100px;
+                height: 30px;
+                position: absolute;
+                top: 22;
+                left: 470;
+            }
+            .last{
+                position: relative;
+            }
+            .last p{
+                color: rgb(176, 7, 119);
+                position: absolute;
+                top: 240;
+                left: 200;
+                font-size: 20px;
+                font-weight: 200;
+                font-style: italic;
+            }
+            .container{
+                color: gold;
+                font-size: 12px;
+                position: absolute;
+                top: 50;
+                left: 220;
+            }
+            .details{
+                position: absolute;
+                top: 50;
+                left: 300;
+                font-size: 12px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Parent">
+            <div class="mb"><p>MEMBERSHIP CARD</p></div>
+            <div class="students">
+                <img src="./image/owlcoder.png"/>
+            </div>
+            <div class="barcode">
+                <img src="./image/barcode.png"/>
+            </div>
+            <div class="thub"><p>TECHNICAL HUB WELCOMES YOU</p></div>
+            <div class="techincal">
+                <img src="https://technicalhub.io/images/technicalhub_logs/1.png">
+            </div>
+            <div class="container">
+                <p>NAME:</p>
+                <p>ROLL NO:</p>
+                <p>BRANCH:</p>
+                <p>COLLEGE:</p>
+            </div>
+            <div class="details">
+                <p>G.S.V.Avinash</p>
+                <p>23A95A1209</p>
+                <p>IT</p>
+                <p>AEC</p>
+            </div>
+            <div class="last">
+                <p>Make Your Future Bright</p>
+            </div>
+        </div>
+    </body>
+</html>

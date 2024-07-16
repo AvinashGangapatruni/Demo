@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <style>
+        .parent {
+            width: 100%;
+            height: 100svh;
+            border: 1px solid black;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            animation-name: myanime;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            background-image: url(https://media.istockphoto.com/id/157639696/photo/purple-space-stars.jpg?s=612x612&w=0&k=20&c=fkLtGZxUS9UPlLJUTeGjvvURT0u-vtxvj5sAYbDNrH4=);
+            background-size: 100% 100%;
+        }
+        
+        .moon {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: white;
+            box-shadow: 0px 0px 10px 5px gray;
+        }
+
+        .earth {
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            top: 36%;
+            left: 45%;
+            border-radius: 100%;
+            background-image: url(./image/earth.png);
+            background-size: 100% 100%;
+        }
+
+        @keyframes myanime {
+            0% {
+
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            12% {
+
+                justify-content: center;
+                align-items: flex-start;
+
+            }
+
+            24% {
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+
+            36% {
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            48% {
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+
+            60% {
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+            72% {
+                justify-content: flex-start;
+                align-items: flex-end;
+            }
+
+            84% {
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            100% {
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="earth"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+
+</html>

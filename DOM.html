@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>DOM Methods</title>
+  <style>
+    body {
+      background-color: #fdffcd;
+    }
+
+    .btn {
+      border: 2px solid black;
+      width: 130px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      background: linear-gradient(#F6B0D7, #74D6F7);
+      border-radius: 20px;
+      font-family: Lucida Calligraphy;
+      font-optical-sizing: auto;
+      font-style: normal;
+      position: relative;
+      left: 45%;
+      top: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 3px 3px rgb(180, 25, 151);
+    }
+
+    .table-container {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    table,
+    th,
+    tr,
+    td {
+      border: 3px solid lightgray;
+      width: 1000px;
+      border-collapse: collapse;
+      height: 45px;
+    }
+
+    table {
+      margin-top: 20px;
+    }
+
+    th {
+      background-color: #EA6153;
+      color: white;
+      font-family: Copperplate Gothic Light;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: skyblue;
+    }
+
+    #btn2 {
+      background-color: #a881af;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    td {
+      text-align: center;
+      height: 40px;
+      font-family: Lucida Handwriting ;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    #btn3 {
+      background-color: #5dbea3;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    #btn2:hover {
+      background-color: #dd7973;
+    }
+
+    #btn3:hover {
+      background-color: #dd7973;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn" id="myButton">Click me</button>
+  <div class="table-container"></div>
+  <script>
+    let tabledata = [];
+    let tableCreated = false;
+
+    document.getElementById("myButton").addEventListener("click", myfunction);
+
+    function myfunction() {
+      if (!tableCreated) {
+        createTable();
+        tableCreated = true;
+      } else {
+        promptDataEntry();
+      }
+    }
+
+    function createTable() {
+      const table = document.createElement("table");
+      const tablehead = document.createElement("thead");
+      const tablebody = document.createElement("tbody");
+      tablehead.innerHTML = `
+            <tr><th>Name</th>
+                <th>Roll No</th>
+                <th>Branch</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Year of Study</th>
+                <th>Actions</th>
+                </tr>`;
+      table.appendChild(tablehead);
+      table.appendChild(tablebody);
+      document.getElementsByClassName("table-container")[0].appendChild(table);
+      const initialData = [
+        { Name: "Avinash", Roll_No: "23A95A1209", Branch: "IT", Gender: "Male", Age: 20, Year_of_Study: "3rd year" },
+        { Name: "Karthik", Roll_No: "22A91A1212", Branch: "IT", Gender: "Male", Age: 21, Year_of_Study: "3rd year" },
+        { Name: "Pavan", Roll_No: "22A91A05D1", Branch: "CSE", Gender: "Male", Age: 19, Year_of_Study: "3rd year" },
+        { Name: "Gowtham", Roll_No: "22A91A6133", Branch: "AIML", Gender: "Male", Age: 18, Year_of_Study: "3rd year" },
+        { Name: "Teja", Roll_No: "22A91A1275", Branch: "IT", Gender: "Male", Age: 19, Year_of_Study: "3rd year" },
+        { Name: "Deva", Roll_No: "23A91A0412", Branch: "ECE", Gender: "Male", Age: 20, Year_of_Study: "2nd year" },
+
+      ];
+      tabledata = initialData;
+      updateTable();
+    }
+
+    function promptDataEntry() {
+      const Name = prompt("Enter your name:");
+      const Roll_No = prompt("Enter your roll no:");
+      const Branch = prompt("Enter your Branch Name:");
+      const Gender = prompt("Enter your Gender:");
+      const Age = parseInt(prompt("Enter your Age:"));
+      const Year_of_Study = prompt("Enter your Year of Study:");
+      if (Name && Roll_No && Branch && Gender && Age && Year_of_Study) {
+        tabledata.push({ Name, Roll_No, Branch, Gender, Age, Year_of_Study });
+      }
+      updateTable();
+    }
+
+    function updateTable() {
+      const tablebody = document.querySelector("tbody");
+      tablebody.innerHTML = '';
+      tabledata.forEach(function (data, index) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+      <td>${data.Name}</td>
+      <td>${data.Roll_No}</td>
+      <td>${data.Branch}</td>
+      <td>${data.Gender}</td>
+      <td>${data.Age}</td>
+      <td>${data.Year_of_Study}</td>
+      <td>
+        <button id="btn2" onclick="updateRow(${index})"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="btn3" onclick="deleteRow(${index})"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    `;
+        tablebody.appendChild(row);
+      });
+    }
+
+    function updateRow(index) {
+      const Name = prompt("Enter new name:", tabledata[index].Name);
+      const Roll_No = prompt("Enter new roll no:", tabledata[index].Roll_No);
+      const Branch = prompt("Enter new Branch Name:", tabledata[index].Branch);
+      const Gender = prompt("Enter new Gender:", tabledata[index].Gender);
+      const Age = parseInt(prompt("Enter new Age:", tabledata[index].Age));
+      const Year_of_Study = prompt("Enter new Year of Study:", tabledata[index].Year_of_Study);
+      if (Name && Roll_No && Branch && Gender && Age && Year_of_Study) {
+        tabledata[index] = { Name, Roll_No, Branch, Gender, Age, Year_of_Study };
+      }
+      updateTable();
+    }
+
+    function deleteRow(index) {
+      if (confirm("Are you sure you want to delete " + tabledata[index].Name + "?")) {
+        tabledata.splice(index, 1);
+        updateTable();
+      }
+    }
+  </script>
+</body>
+
+</html>

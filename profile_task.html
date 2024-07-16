@@ -1,0 +1,346 @@
+<html>
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .head {
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .lap {
+            width: 60px;
+            height: 35px;
+            color: white;
+            background-color: #93E047;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .lap1 {
+            width: 70px;
+            height: 35px;
+            color: white;
+            background-color: #8ACFF2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            margin-left: 3px;
+        }
+
+        .lap2 {
+            width: 60px;
+            height: 35px;
+            color: white;
+            background-color: #FD625B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            margin-left: 3px;
+        }
+
+        .profile {
+            width: 300px;
+            height: 580px;
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px gray;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            border: 3px solid #0D72D8;
+            margin-top: 30px;
+            margin-left: 80px;
+            background-image: url(https://img.freepik.com/premium-vector/avatar-male-character-young-age-isolated-portrait-teenager-sweater-personage-photo-social-media-cv-student-high-school-university-college-friendly-guy-vector-flat_87689-2390.jpg);
+            background-size: 100% 100%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .follow {
+            width: 75px;
+            height: 30px;
+            color: white;
+            border-radius: 4px;
+            background-color: #007CFA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .message {
+            width: 75px;
+            height: 30px;
+            color: #007CFA;
+            border: 1px solid #007CFA;
+            border-radius: 4px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .details {
+            display: flex;
+        }
+
+        .info {
+            width: 900px;
+            height: 390px;
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px gray;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: block;
+        }
+
+        .fn {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+
+        .b {
+            display: flex;
+            align-items: center;
+        }
+
+        .w {
+            margin-top: 5px;
+        }
+
+        .enter {
+            width: 700px;
+            height: 30px;
+            border: 1px solid lightgrey;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+
+        .enter1 {
+            width: 700px;
+            height: 30px;
+            border: 1px solid lightgrey;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 90px;
+        }
+
+        .enter2 {
+            width: 700px;
+            height: 30px;
+            border: 1px solid lightgrey;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+
+        .enter3 {
+            width: 700px;
+            height: 30px;
+            border: 1px solid lightgrey;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 70px;
+        }
+
+        .save {
+            width: 100px;
+            height: 30px;
+            background-color: #007AFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            color: white;
+            margin-left: 155px;
+            margin-top: 20px;
+        }
+
+        .status {
+            width: 900px;
+            height: 360px;
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px gray;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        #ps {
+            padding-left: 20px;
+            font-size: 20px;
+        }
+
+        .wd {
+            margin-left: 20px;
+        }
+
+        progress[value] {
+            width: 850px;
+            height: 10px;
+            margin-left: 20px;
+            overflow: visible;
+        }
+
+        .wd1 {
+            accent-color: #0372E1;
+        }
+
+        .wd2 {
+            accent-color: #D03647;
+        }
+
+        .wd3 {
+            accent-color: #24A944;
+        }
+
+        .wd4 {
+            accent-color: #F6C116;
+        }
+
+        .wd5 {
+            accent-color: #1B9FB5;
+        }
+
+        hr {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .fa-globe {
+            margin-left: 5px;
+        }
+
+        .fa-github {
+            margin-left: 5px;
+        }
+
+        .fa-twitter {
+            margin-left: 5px;
+            color: skyblue;
+        }
+
+        .fa-instagram {
+            margin-left: 5px;
+            color: lightcoral;
+        }
+
+        .fa-facebook {
+            margin-left: 5px;
+            color: blue;
+        }
+
+        .mark {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="lap">Preview</div>
+        <div class="lap1">HTML</div>
+        <div class="lap1">CSS</div>
+        <div class="lap1">Download</div>
+        <div class="lap2">Actions</div>
+    </div>
+    <div class="details">
+        <div class="profile">
+            <div class="circle"></div>
+            <div class="mark">
+                <h2>John Doe</h2>
+                <p>Full Stack Developer</p>
+                <p>Bay Area, San Francisco, CA</p>
+            </div>
+            <div class="buttons">
+                <div class="follow">Follow</div>
+                <div class="message">Message</div>
+            </div>
+            <hr />
+            <p><i
+                    class="fa-solid fa-globe"></i>&nbsp;&nbsp;&nbsp;<b>Website</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://bootdey.com
+            </p>
+            <hr />
+            <p><i
+                    class="fa-brands fa-github"></i>&nbsp;&nbsp;&nbsp;<b>Github</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bootdey
+            </p>
+            <hr />
+            <p><i
+                    class="fa-brands fa-twitter"></i>&nbsp;&nbsp;&nbsp;<b>Twitter</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@bootdey
+            </p>
+            <hr />
+            <p><i
+                    class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;<b>Instagram</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bootdey
+            </p>
+            <hr />
+            <p><i
+                    class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;<b>Facebook</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bootdey
+            </p>
+        </div>
+        <div>
+            <div class="info">
+                <div class="b">
+                    <div class="fn">Full Name</div>
+                    <div class="enter">John Doe</div>
+                </div>
+                <div class="b">
+                    <div class="fn">Email</div>
+                    <div class="enter1">john@example</div>
+                </div>
+                <div class="b">
+                    <div class="fn">Phone</div>
+                    <div class="enter1">(239) 816-9029</div>
+                </div>
+                <div class="b">
+                    <div class="fn">Mobile</div>
+                    <div class="enter2">(320) 380-4539</div>
+                </div>
+                <div class="b">
+                    <div class="fn">Address</div>
+                    <div class="enter3">Bay Area, San Francisco, CA</div>
+                </div>
+                <div class="save">Save Changes</div>
+            </div>
+            <div class="status">
+                <p id="ps">Project Status</p>
+                <p class="wd">Web Design</p>
+                <progress class="wd1" value="80" max="100"></progress>
+                <p class="wd">Website Markup</p>
+                <progress class="wd2" value="75" max="100"></progress>
+                <p class="wd">One Page</p>
+                <progress class="wd3" value="85" max="100"></progress>
+                <p class="wd">Mobile Template</p>
+                <progress class="wd4" value="65" max="100"></progress>
+                <p class="wd">Backend API</p>
+                <progress class="wd5" value="70" max="100"></progress>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

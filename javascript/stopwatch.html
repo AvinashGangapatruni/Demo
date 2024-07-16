@@ -1,0 +1,80 @@
+<html>
+<head>
+     <title>Stop Watch</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            background-image: url(http://wallpapercave.com/wp/JXwuN2Q.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .time {
+            margin-top: 20px;
+        }
+        .time button {
+            margin-left: 10px;
+            font-size: 32px;
+            background-color: transparent;
+            outline: none;
+            color: white;
+            backdrop-filter: blur(50px);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="timer">00:00:00</h1>
+    <div class="time">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        var timer;
+        var hours = 0;
+        var minutes = 0;
+        var seconds = 0;
+
+        function start() {
+            clearInterval(timer); 
+            timer = setInterval(updateTime, 1000);
+        }
+
+        function stop() {
+            clearInterval(timer); 
+        }
+
+        function reset() {
+            clearInterval(timer); 
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            document.getElementById('timer').textContent = '00:00:00'; 
+        }
+
+        function updateTime() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+            var timeString = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds);
+            document.getElementById('timer').textContent = timeString; 
+        }
+
+        function padZero(number) {
+            return ('0' + number).slice(-2);
+        }
+    </script>
+</body>
+</html>

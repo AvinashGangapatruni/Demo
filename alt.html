@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <title>ALT</title>
+        <style>
+            .parent
+            {
+                width: 100%;
+                height:100svh;
+                border: 1px solid white;
+                background-color: whitesmoke;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around; 
+            }
+            .child
+            {
+                width:200px;
+                height:300px;
+                border: 1px solid white;
+                box-shadow: 0px 0px 10px lightgray;
+                border-radius: 10px;
+                background-color: white;
+            }
+            .child:hover
+            {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 10px lightgray;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .i{
+                display: flex;
+            }
+            .strip
+            {
+                width: 8px;
+                height: 60px;
+                background-color: gray;
+                margin-top: 30px;
+            }
+            .child:hover .strip
+            {
+                background-color: red;
+            }
+            .pic1
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/POLO_Residential_WHITE_NA_ALT0233.png);
+                background-size: 100% 100%;
+            }
+            .pic2
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/GLOSTER_Residential_BLACK_Matt%20Black_ALT0848.png);
+                background-size: 100% 100%;
+                
+            }
+            .pic3
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/BAFFLE_Residential_WHITE_NA_ALT1055D.png);
+                background-size: 100% 100%;
+            }
+            .pic4
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/MAGNUM%20_Residential_ROSE%20GOLD_NA_ALT1041.png);
+                background-size: 100% 100%;
+            }
+            .pic5
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/MAGNUM%20_Residential_BLACK_NA_ALT1035.png);
+                background-size: 100% 100%;
+            }
+            .pic6
+            {
+                width: 110px;
+                height: 110px;
+                margin-top: 50px;
+                margin-left: 30px;
+                background-image: url(https://altlights.com/Product_Images/MATRIX_Residential_BLACK_NA_ALT0911.png);
+                background-size: 100% 100%;
+            }
+            .name
+            {
+                width: 150px;
+                height: 40px;
+                margin-left: 8px;
+                margin-top: 70px;
+                display: flex;
+            }
+            .light
+            {
+                display: flex;
+                align-items: center;
+            }
+            
+            .code1
+            {
+                color: red;
+                position: absolute;
+                margin-top: 11px;
+                margin-left: 120px;
+            }
+             .code2
+            {
+                color: red;
+                margin-top:11px ;
+                margin-left:50px;
+            }
+            .code3
+            {
+                color: red;
+                margin-top:11px ;
+                margin-left:50px;
+            }
+            .code4
+            {
+                color: red;
+                margin-top:11px ;
+                margin-left:50px;
+            }
+            .code5
+            {
+                color: red;
+                margin-top:11px ;
+                margin-left:50px;
+            }
+            .code6
+            {
+                color: red;
+                margin-top:11px ;
+                margin-left:60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic1"></div>
+                </div>
+                <div class="name">
+                    <div class="light">POLO</div>
+                    <div class="code1">ALT0233</div>
+                </div>               
+            </div>
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic2"></div>
+                </div>
+                <div class="name">
+                    <div class="light">GLOSTER</div>
+                    <div class="code2">ALT0848</div>
+                </div>
+                
+            </div>
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic3"></div>
+                </div>
+                <div class="name">
+                    <div class="light">BAFFLE</div>
+                    <div class="code3">ALT1055D</div>
+                </div>
+            </div>
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic4"></div>
+                </div>
+                <div class="name">
+                    <div class="light">MAGNUM</div>
+                    <div class="code4">ALT1041</div>
+                </div>
+            </div>
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic5"></div>
+                </div>
+                <div class="name">
+                    <div class="light">MAGNUM</div>
+                    <div class="code5">ALT1035</div>
+                </div>
+
+            </div>
+            <div class="child">
+                <div class="i"><div class="strip"></div>
+                <div class="pic6"></div>
+                </div>
+                <div class="name">
+                    <div class="light">MATRIX</div>
+                    <div class="code6">ALT0911</div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>

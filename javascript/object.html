@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        x = parseInt(window.prompt(" Enter a number "));
+        var count = 0;
+        for (var i = 0; i <= x; i++) {
+            if (x % i == 0) {
+                count++;
+            }
+            if (count > 2) {
+                console.log(x + " is not a prime number");
+            }
+        }
+        if (count == 2) {
+            console.log(x + " is a prime number");
+        }
+    </script>
+</head>
+
+</html>

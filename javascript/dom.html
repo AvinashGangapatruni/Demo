@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSklGDCdeERjKRztWRVs4JKUnsVckdP5xJz_roIXd2u6u1wBgmT"
+        class="mydiv" />
+    <button onclick="fun()">Click me to change</button>
+    <script>
+        function fun() {
+            var x = document.getElementsByClassName("mydiv")[0];
+            x.setAttribute("src", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7vQhytuDeXwAyIaB0PvfF90dXPTMzHSf_ISfBDsX5hrLKyiAz");
+            x.style.borderRadius = "10px";
+            x.style.boxShadow = "0px 0px 10px gray";
+        }
+    </script>
+</body>
+
+</html>

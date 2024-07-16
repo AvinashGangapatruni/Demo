@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            try{
+                x = window.prompt("Enter the number");
+                if(x != 0)
+                {
+                    throw("Number is Zero");
+                }
+            }
+            catch(e){
+                console.log(e);
+            }
+            finally{
+                console.log("Finally block executed");
+            }
+        </script>
+    </head>
+</html>
